@@ -27,4 +27,5 @@ while 1:
     img.click()
     btn = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.CLASS_NAME, 'btn')))
     btn.click()
-    time.sleep(1)
+    while btn.is_displayed():
+        time.sleep(1)
